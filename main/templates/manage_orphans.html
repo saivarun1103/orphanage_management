@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Manage Orphans</h1>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+        <tbody>
+            {% for orphan in orphans %}
+            <tr>
+                <td>{{ orphan.first_name }}</td>
+                <td>{{ orphan.last_name }}</td>
+                <td>{{ orphan.age }}</td>
+                <td>{{ orphan.date_of_birth }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+    
